@@ -20,20 +20,7 @@
 </head>
 <body>
     <h3>利用料金の計算</h3>
-    <button onclick="multiply_0();""利用料金の合計</button>
-    <button onclick="multiply_1();">利用料金の合計</button>
-    <button onclick="multiply_2();">利用料金の合計</button>
-
-    <script>
-        let price - {500,980,1200}
-
-        let b=10;    alert('答えは' + answer + 'です');
-        
-        function multiply_0(){
-            let answer = a*b;
-            alert('答えは' + answer + 'です');
-        }
-    </script>
+    
     <table>
         <tr>
             <th>No.</th>
@@ -45,22 +32,31 @@
             <th>0</th>
             <td>500</td>
             <td>10</td>
-            <td><button>利用料金の合計</button></td>
+            <td><button onclick=" multiply(0);">利用料金の合計</button></td>
         </tr>
         <tr>
             <th>1</th>
             <td>980</td>
             <td>16</td>
-            <td><button>利用料金の合計</button></td>
+            <td><button onclick=" multiply(1);">利用料金の合計</button></td>
         </tr>
         <tr>
             <th>2</th>
             <td>1200</td>
             <td>8</td>
-            <td><button>利用料金の合計</button></td>
+            <td><button onclick=" multiply(2);">利用料金の合計</button></td>
         </tr>
 
     </table>
+
+    <script>
+        let a=[500,980,1200];
+        let b=[10,16,8];
+        function multiply(num){
+            let answer = a[num]*b[num];
+            alert('料金は' + answer + 'です');
+        }
+    </script>
 </body>
 
 </html>
