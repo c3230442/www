@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>要素取得と内容の変更</title>
 </head>
+<style>
+    #yoyaku{
+        color: red;
+        font-weight: bold;
+    }
+    #a{
+        font-weight: bold;
+        }
+</style>
 <body>
     <h3>座席の予約</h3>
-    <p>東京会場    </p>
-    <p>東京海上（予約受け</p>
-    <button onclick="">予約する</button>
+    <p>東京会場 <span id="yoyaku">（予約受け中）</span> </p>
+    <div id="a">
+        <button onclick="o();">予約する</button>
+    </div>
+    <script>
+        function o(){
+        document.getElementById('yoyaku').textContent='(予約済み)';
+        document.getElementById('a').textContent='  ありがとうございました。';
+        }
+    </script>
 </body>
 </html>
