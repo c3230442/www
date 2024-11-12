@@ -7,10 +7,21 @@
 </head>
 <body>
     <h1>人口の多い国ランキング</h1>
-    <p>1.中国</p>
-    <p>2.インド</p>
-    <p>3.アメリカ</p>
-    <p>4.インドネシア</p>
+    <ol>
+        <li id="chn">中国</li>
+        <li id="ind">インド</li>
+        <li id="usa">アメリカ</li>
+        <li id="idn">インドネシア</li>
+    </ol>
     <button onclick="showAnswer();">国旗で表示</button>
+
+    <script>
+        function showAnswer(){
+            document.getElementById('chn').innerHTML = '<img src="images/flag_CHN.png">';
+            document.getElementById('ind').innerHTML = '<img src="images/flag_I.png">';
+            document.getElementById('usa').innerHTML = '<img src="images/flag_USA.png">';
+            document.getElementById('idn').innerHTML = '<img src="images/flag_IDN.png">';
+        }
+    </script>
 </body>
 </html>
