@@ -10,7 +10,7 @@
         }
         td,th {
             border: solid 1px #000;
-            width: 40px;
+            width: 80px;
             padding: 5px;
             text-align: center;
         }
@@ -19,52 +19,38 @@
         }
     </style>
 </head>
-<body>
-    <h3>入場料の一覧</h3>
+<body onload="createTable()">
+    <h1>入場料の一覧</h1>
     <table>
-        <tr>
-            <th></th>
-            <th>大人</th>
-            <th>高校生</th>
-            <th>中学生</th>
-            <th>小学生</th>
-        </tr>
-        <tr>
-            <th>1人</th>
-            <td>800円</td>
-            <td>680円</td>
-            <td>450円</td>
-            <td>380円</td>
-        </tr>
-        <tr>
-            <th>2人</th>
-            <td>1600円</td>
-            <td>1360円</td>
-            <td>900円</td>
-            <td>760円</td>
-        </tr>
-        <tr>
-            <th>3人</th>
-            <td>2400円</td>
-            <td>2040円</td>
-            <td>1350円</td>
-            <td>1140円</td>
-        </tr>
-        <tr>
-            <th>4人</th>
-            <td>3200円</td>
-            <td>2720円</td>
-            <td>1800円</td>
-            <td>1520円</td>
-        </tr>
-        <tr>
-            <th>5人</th>
-            <td>4000円</td>
-            <td>3400円</td>
-            <td>2250円</td>
-            <td>1900円</td>
-        </tr>
-
+        <thead id="t_head"></thead>
+        <tbody id="t_body"></tbody>
+    </table>
+ 
+    <script>
+        function createTable() {
+            let era = ['大人','高校生','中学生','小学生']
+            let row = '<tr><th></th>';
+            for (let j = 0; j < era.length; j++) {
+                row = row + '<th>' + era[j] + '</th>';
+            }
+            row = row + '</tr>';
+            document.getElementById('t_head').insertAdjacentHTML('beforeend', row);
+ 
+            let amount =[800,680,450,380]
+            let people = 5;
+            for (let i = 1; i <= people; i++) {
+                let row = '<tr><th>' + i + '人</th>';
+                for (let j = 0; j < era.length; j++) {
+                    row = row + '<td>' + i*amount[j] + '円</td>';
+                }
+                row = row + '</tr>';
+                document.getElementById('t_body').insertAdjacentHTML('beforeend', row);
+            }
+        }
+    </script>
+</body>
+</html>
+ 
     </table>
     </script>
 </body>
