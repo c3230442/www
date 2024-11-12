@@ -8,34 +8,30 @@
 <body>
     <h3>変数の演算</h3>
     <p>a=10, b=4の場合</p>
-    <button onclick="showAnswer();">足し算</button>
-    <script>
-        function add( ){
+    <button onclick="add();">足し算</button>
+    <button onclick="subtract();">引き算</button>
+    <button onclick="multiply();">掛け算</button>
+    <button onclick="divide();">割り算</button>
+   
+     <script>
+        let a=10;
+        let b=4;
+        function add(){
             let answer = a+b;
             alert('答えは' + answer + 'です');
         }
-    </script>
-    <button onclick="showAnswer();">引き算</button>
-    <script>
-        function subtract( ){
+        function subtract(){
             let answer = a-b;
             alert('答えは' + answer + 'です');
         }
-    </script>
-    <button onclick="showAnswer();">掛け算</button>
-    <script>
-        function multiply( ){
+        function multiply(){
             let answer = a*b;
             alert('答えは' + answer + 'です');
         }
-    </script>
-     <button onclick="showAnswer();">割り算</button>
-     <script>
-         function divide( ){
+        function divide(){
              let answer = a/b;
              alert('答えは' + answer + 'です');
          }
      </script>
-    
 </body>
 </html>
